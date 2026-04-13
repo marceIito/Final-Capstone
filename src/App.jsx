@@ -3,24 +3,20 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Profile from './pages/Profile';
 import Timer from './pages/Timer';
-import { useState } from "react";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <BrowserRouter basename="/Final-Capstone/">
         
         <nav>
 
-          <h1>Welcome!</h1>
-          <button className="border" onCLick={()=> setIsOpen (!isOpen)}>{isOpen? 'click x': 'click -'}</button>
-          {isOpen &&
+        
           <Link to="/">Home</Link> | <Link to="/about">About</Link> |
           <Link to="/profile">Profile</Link> |
           <Link to="/Timer"> 
           Sobriety Timer</Link>
-}
+
         </nav>
 
         <Routes>
